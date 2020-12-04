@@ -12,11 +12,11 @@
             </div>
 
             <div class="card-body">
-                <p>Are you sure you want to delete <b>{{ task }}</b>?</p>
-                <a href="{% url 'entry-detail' object.id %}">Cancel</a>
+                <p>Are you sure you want to delete <b>{{ item.entry_title }}</b>?</p>
                 <form method="POST">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-primary">Delete Blog</button>
+                    <a href="{% url 'entry-detail' item.id %}" class="btn btn-primary">Cancel</a>
+                    <button type="submit" class="btn btn-outline-danger">Delete Blog</button>
                 </form>
             </div>
         </div>

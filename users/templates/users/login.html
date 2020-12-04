@@ -2,22 +2,21 @@
 
 {% block content %}
 
-      <div class="col-md-8 mt-4">
-          <a href="{% url 'register' %}">Create A New Account</a>
+    <div class="col-md-8 mt-4">
+        <a href="{% url 'register' %}" class="btn btn-outline-dark">Create A New Account</a>
 
-        <!-- Blog Post -->
         <div class="card mb-4 mt-4">
-          <div class="card-header">
-              Login to Your Account
-          </div>
-          <div class="card-body">
-              <form method="POST">
-                  {% csrf_token %}
-                  {{form.as_p}}
-                  <button type="submit" class="btn btn-primary">Login</button>
-              </form>
-          </div>
+            <div class="card-header">
+                Login to Your Account
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
         </div>
-      </div>
+    </div>
 
-        {% endblock %}
+{% endblock %}

@@ -69,10 +69,14 @@ def edit_blog_view(request, pk):
     return render(request, 'entries/edit_entry.html', context)
 
 
-class DeleteEntryView(LoginRequiredMixin, DeleteView):
-    model = Entry
-    template_name = 'entries/delete_entry.html'
+@login_required(login_url='login')
+def delete_blog_view(request, pk):
+    blog = Entry.objects.get(id=pk)
+    if request.method == 'POST':
+        blog.delete()
+        return redirect('blog-home')
 
-    def form_valid(self, form):
-        form.instance.entry_author = self.request.user
-        return super().form_valid(form)
+    context = {
+        'item': blog,
+    }
+    return render(request, 'entries/delete_entry.html', context)

@@ -3,18 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="16b621ab-6f43-47b1-92e3-f467aa673434" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogsite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entries/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/entries/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entries/templates/entries/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entries/templates/entries/create_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/create_entry.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entries/templates/entries/delete_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/delete_entry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entries/templates/entries/edit_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/edit_entry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entries/templates/entries/entry_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/entry_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entries/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/entries/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entries/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/entries/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
