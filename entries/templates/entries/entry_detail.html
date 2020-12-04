@@ -2,26 +2,27 @@
 
 {% block content %}
 
-<!-- Blog Entries Column -->
-<div class="col-md-8">
-  <!-- Blog Post -->
-  <div class="card mb-4 mt-4">
-    <div class="card-body">
-      <h3 class="card-title">{{ object.entry_title }}</h3>
-      {% if user.is_authenticated and user == object.entry_author %}
-      <p>
-        <a href="{% url 'edit-entry' object.id %}">Edit</a>  |  <a href="{% url 'delete-entry' object.id %}">Delete</a>
-      </p>
-      {% endif %}
-      <p class="card-text">{{ object.entry_text|linebreaks}}</p>
-    </div>
-    <div class="card-footer text-muted">
-      Posted on {{ object.entry_date}} by
-      <span class= "text-info mr-2">{{ object.entry_author }}</span>
-    </div>
-    <div>
+    <div class="col-md-8">
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4">
+            <div class="card-body">
+                <h3 class="card-title">{{ blog.entry_title }}</h3>
+                {% if user.is_authenticated and user == blog.entry_author %}
+                    <p>
+                        <a href="{% url 'edit-entry' blog.id %}" class="btn btn-outline-dark">Edit</a>
+                        <a href="{% url 'delete-entry' blog.id %}" class="btn btn-outline-danger">Delete</a>
+                    </p>
+                {% endif %}
+                <p class="card-text">{{ blog.entry_text|linebreaks }}</p>
+            </div>
+            <div class="card-footer text-muted">
+                Posted on {{ blog.entry_date }} by
+                <span class="text-info mr-2">{{ blog.entry_author }}</span>
+            </div>
+            <div>
 
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
 {% endblock %}
