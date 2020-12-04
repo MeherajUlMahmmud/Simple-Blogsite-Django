@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16b621ab-6f43-47b1-92e3-f467aa673434" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogsite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entries/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/entries/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entries/templates/entries/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entries/templates/entries/create_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/create_entry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entries/templates/entries/delete_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/delete_entry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entries/templates/entries/edit_entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/edit_entry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entries/templates/entries/entry_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/entries/templates/entries/entry_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entries/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/entries/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entries/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/entries/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,10 +24,20 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iu3IxVV8T7KlmlTUMLfDR8ao3h" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,8 +47,9 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../KORMO/demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -71,6 +94,9 @@
       <workItem from="1602840108678" duration="4047000" />
       <workItem from="1602848226851" duration="2173000" />
       <workItem from="1602924132910" duration="7000" />
+      <workItem from="1606660534771" duration="1370000" />
+      <workItem from="1607009399667" duration="2329000" />
+      <workItem from="1607061174815" duration="2558000" />
     </task>
     <servers />
   </component>
@@ -78,6 +104,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607061244438">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1607061244438" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1602744956248">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
