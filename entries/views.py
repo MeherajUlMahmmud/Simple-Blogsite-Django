@@ -1,17 +1,16 @@
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.shortcuts import render, redirect
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from django.contrib.auth.mixins import LoginRequiredMixin
-
+from django.utils.text import slugify
 from .forms import EntryForm
-from .models import Entry
+from .models import *
 
 
 @login_required(login_url='login')
 def home(request):
     entries = Entry.objects.all().order_by('-entry_date')
 
+    entry_search = ""
     entry_search = request.GET.get('q')
 
     if entry_search is not None:
@@ -19,13 +18,14 @@ def home(request):
 
     context = {
         'blog_entries': entries,
+        'entry_search': entry_search,
     }
     return render(request, 'entries/index.html', context)
 
 
 @login_required(login_url='login')
-def detail_view(request, pk):
-    blog = Entry.objects.get(id=pk)
+def detail_view(request, entry_slug):
+    blog = Entry.objects.get(entry_slug=entry_slug)
     context = {
         'blog': blog,
     }
@@ -38,8 +38,10 @@ def add_blog_view(request):
     if request.method == 'POST':
         form = EntryForm(request.POST)
         if form.is_valid():
-            blog = form.save(commit=False)
+            blog = form.save()
             blog.entry_author = request.user
+            slug_str = "%s %s" % (blog.entry_title, blog.entry_date)
+            blog.entry_slug = slugify(slug_str)
             form.save()
             return redirect('blog-home')
         else:

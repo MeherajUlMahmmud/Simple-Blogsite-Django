@@ -1,6 +1,7 @@
+<!DOCTYPE html>
+
 {% load static %}
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -24,7 +25,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{% url 'blog-home' %}">Just Another Blogsite</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         {% if user.is_authenticated %}
@@ -32,7 +34,10 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <form method="GET">
-                        <input type="text" class="form-control" name="q" id="id_q" placeholder="Search Blog">
+                        <input type="text" class="form-control" name="q" id="id_q"
+                               {% if blog_search %}
+                               value="{{ blog_search }}"
+                               {% endif %} placeholder="Search Blog">
                     </form>
                 </li>
 
@@ -46,7 +51,7 @@
             </ul>
         </div>
         {% else %}
-        <div class="collapse navbar-collapse" >
+        <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link btn-outline-primary rounded ml-2" href="{% url 'login' %}">Login</a>
@@ -75,10 +80,11 @@
                 <div class="card-body">
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <p> <strong>Username:</strong> {{ user.username }} </p>
+                            <a href="{% url 'profile' request.user.username %}"> <strong>Username:</strong>
+                                {{ request.user.username }} </a>
                         </li>
                         <li>
-                            <p> <strong>Email:</strong> {{ user.email }} </p>
+                            <p><strong>Email:</strong> {{ user.email }} </p>
                         </li>
                     </ul>
                 </div>
@@ -104,9 +110,7 @@
 <!-- Bootstrap core JavaScript -->
 <script src="{% static 'entries/vendor/jquery/jquery.min.js' %}"></script>
 <script src="{% static 'entries/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-<script type="text/javascript">
-    document.getElementById("id_q").value = "{{ query }}";
-</script>
+
 
 </body>
 
