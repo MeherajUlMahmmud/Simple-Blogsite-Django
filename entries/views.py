@@ -60,6 +60,9 @@ def edit_blog_view(request, pk):
     if request.method == 'POST':
         form = EntryForm(request.POST, instance=blog)
         if form.is_valid():
+            blog = form.save()
+            slug_str = "%s %s" % (blog.entry_title, blog.entry_date)
+            blog.entry_slug = slugify(slug_str)
             form.save()
             return redirect('entry-detail', blog.id)
         else:
